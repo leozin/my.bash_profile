@@ -1,0 +1,43 @@
+PATH=$PATH:/Users/le009ra/dev/apps/apache-maven-3.5.0/bin
+alias h='cd /Users/le009ra/'
+alias p='cd /Users/le009ra/dev/projects'
+alias c="tr -d '\n' | pbcopy"
+alias pwdc="pwd | c"
+alias cmp='cd /Users/le009ra/dev/projects/MarketConnect/CMP'
+alias mci='mvn clean install'
+alias mcis='mvn clean install -DskipTests'
+alias reload='source ~/.bash_profile'
+## Colorize the ls output ##
+#alias ls='ls --color=auto'
+ 
+## Use a long listing format ##
+alias ll='ls -la'
+
+alias cd..='cd ..'
+
+## a quick way to get out of current directory ##
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+
+alias grep='grep --color=auto'
+
+alias mkdir='mkdir -pv'
+alias dirsize='du -sh'
+
+#show open ports
+alias ports='netstat -tulanp'
+
+docker-machine start main
+eval "$(docker-machine env main)"
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/dev/projects/python
+source /usr/local/bin/virtualenvwrapper.sh
+
+export DOCKER_IP=$(docker-machine ip main)
+
+alias docker-rebuild='docker-compose down; docker-compose up'
